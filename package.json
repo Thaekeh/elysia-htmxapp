@@ -3,13 +3,26 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.tsx",
+    "tailwind": "npx tailwindcss -i src/tailwind.css -o public/tailwind.css --watch",
+    "migrate-drizzle": "bun run src/db/migrate.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/cookie": "^0.8.0",
+    "@elysiajs/jwt": "^1.0.2",
+    "@types/react": "^18.2.67",
+    "@types/react-dom": "^18.2.22",
+    "drizzle-orm": "^0.30.4",
+    "elysia": "latest",
+    "postgres": "^3.4.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "drizzle-kit": "^0.20.14",
+    "tailwindcss": "^3.4.1"
   },
   "module": "src/index.js"
 }
